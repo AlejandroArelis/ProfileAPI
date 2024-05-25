@@ -3,11 +3,11 @@ from typing import List, Optional
 
 class Profile(BaseModel):
   name: str
-  job: str
   email: str
-  phone: str
-  city: str
-  azure_id: Optional[str] = None
+  azure_id: str
+  job: Optional[str] = None
+  phone: Optional[str] = None
+  city: Optional[str] = None
 
 class ProfileDB(Profile):
   id: str
