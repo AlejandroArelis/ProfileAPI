@@ -2,7 +2,9 @@ import logging
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from crud import router
+from profile.routes import router as profile_routes
+from skills_group.routes import router as skills_group_routes
+from skill.routes import router as skill_routes
 
 app = FastAPI()
 
@@ -13,17 +15,21 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # Permite estos orígenes
+    allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],  # Permite todos los métodos (GET, POST, etc.)
-    allow_headers=["*"],  # Permite todos los encabezados
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
-app.include_router(router)
+app.include_router(profile_routes)
+app.include_router(skills_group_routes)
+app.include_router(skill_routes)
+
 
 @app.get("/")
 def hello():
   return {'message': 'Holi'}
+
 
 @app.exception_handler(Exception)
 async def exception_handler(request: Request, exc: Exception):
