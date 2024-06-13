@@ -5,21 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90269a17-8aa0-4c61-beb0-2d473ad29ae6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/profile/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile/exeptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profile/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skill/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skill/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skill/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skills_group/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ProfileApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProfileApi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skill_group/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crud.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exceptions.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skills_group/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skills_group/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill_group/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skills_group/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill_group/routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,15 +87,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/profile/routes.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
