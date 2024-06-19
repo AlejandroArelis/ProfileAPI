@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90269a17-8aa0-4c61-beb0-2d473ad29ae6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/skill_group/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ProfileApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProfileApi.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills_group/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills_group/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill_group/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skills_group/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill_group/routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +82,9 @@
       <updated>1716272340396</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
