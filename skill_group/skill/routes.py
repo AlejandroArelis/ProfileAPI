@@ -1,26 +1,34 @@
 from bson import ObjectId
 from fastapi import APIRouter, HTTPException
 from database import db
-from skill.models import Skill_in, Skill_out
-from skill_group.models import Skills_group_out
-
+from skill_group.skill.models import Skill_in, Skill_out
 
 router = APIRouter(
     prefix="/skill",
     tags=["skill"]
 )
 
+skills = db["skills"]
+skill_groups = db["skill_groups"]
+
+
+@router.get("/")
+async def get_all():
+    items = await skills.find().to_list(None)
+
+    return [Skill_out(**item, id=str(item["_id"])) for item in items]
+
 
 @router.get("/{skill_group}")
-async def get(skill_group: str):
-    items = await db["skills"].find({"skill_group": skill_group}).to_list(None)
+async def get_by_group(skill_group: str):
+    items = await skills.find({"skill_group": skill_group}).to_list(None)
 
     return [Skill_out(**item, id=str(item["_id"])) for item in items]
 
 
 # @router.get("/{item_id}")
 async def get_by_id(item_id: str):
-    item = await db["skills"].find_one({"_id": ObjectId(item_id)})
+    item = await skills.find_one({"_id": ObjectId(item_id)})
     if item:
         return Skill_out(**item, id=str(item["_id"]))
     else:
@@ -35,26 +43,26 @@ async def new(item: Skill_in):
             raise HTTPException(status_code=400, detail=f"\"{item.name}\" ya existe")
         else:
             # Obtención del documento skill_group padre de la coleccion skill_groups
-            skill_group = await db["skill_groups"].find_one({"_id": ObjectId(item.skill_group)})
+            skill_group = await skill_groups.find_one({"_id": ObjectId(item.skill_group)})
 
             # Ciclo de cada id de la lista de skills de skill_groups padre
             for id in skill_group["skills"]:
 
                 # Obtención completa de cada skill dependiendo el id de la lista de skills de skill_groups padre
-                skill = await db["skills"].find_one({"_id": ObjectId(id)})
+                skill = await skills.find_one({"_id": ObjectId(id)})
 
                 # Validación de si el nuevo skill exite ya en la lista de skills
                 if skill["name"] == item.name:
                     raise HTTPException(status_code=400, detail=f"\"{item.name}\" ya existe registrado en el grupo {skill_group["name"]}")
 
             item_dump = item.model_dump()
-            response = await db["skills"].insert_one(item_dump)
+            response = await skills.insert_one(item_dump)
             item_dump["id"] = str(response.inserted_id)
 
             # inserción del id del nuevo skill en la lista de skills del skill_group padre
             skill_group["skills"].append(str(response.inserted_id))
             # Actualización de la lista vieja por la actual
-            await db["skill_groups"].update_one({"_id": skill_group["_id"]}, {"$set": {"skills": skill_group["skills"]}})
+            await skill_groups.update_one({"_id": skill_group["_id"]}, {"$set": {"skills": skill_group["skills"]}})
 
             return Skill_out(**item_dump)
     except Exception as e:
@@ -64,16 +72,16 @@ async def new(item: Skill_in):
 @router.put("/{item_id}")
 async def update(item_id: str, item: Skill_in):
     try:
-        item_found = await db["skills"].find_one({"name": item.name})
+        item_found = await skills.find_one({"name": item.name})
         if item_found:
             raise HTTPException(status_code=400, detail=f"\"{item.name}\" ya existe")
 
         item_dump = item.model_dump()
 
-        result = await db["skills"].update_one({"_id": ObjectId(item_id)}, {"$set": item_dump})
+        result = await skills.update_one({"_id": ObjectId(item_id)}, {"$set": item_dump})
 
         if result.modified_count == 1 or result.raw_result.get('updatedExisting'):
-            return await get_by_id(item_id)
+            return True
         else:
             raise HTTPException(status_code=404, detail="El elemento no se ha encontrado")
     except Exception as e:
@@ -84,23 +92,23 @@ async def update(item_id: str, item: Skill_in):
 async def delete(item_id: str):
     try:
         # Busca el skill
-        item = await db["skills"].find_one({"_id": ObjectId(item_id)})
+        item = await skills.find_one({"_id": ObjectId(item_id)})
 
         # Si no lo encuentra lanza una excepción
         if not item:
             raise HTTPException(status_code=404, detail=f"La habilidad no fue encontrada")
 
         # Obtiene el documento completo del padre de la skill
-        skill_group = await db["skill_groups"].find_one({"_id": ObjectId(item["skill_group"])})
+        skill_group = await skill_groups.find_one({"_id": ObjectId(item["skill_group"])})
         if skill_group:
             # Remueve el id de la skill de la lista de skills y la actualiza
             skill_group["skills"].remove(item_id)
-            await db["skill_groups"].update_one({"_id": skill_group["_id"]}, {"$set": {"skills": skill_group["skills"]}})
+            await skill_groups.update_one({"_id": skill_group["_id"]}, {"$set": {"skills": skill_group["skills"]}})
         else:
             raise HTTPException(status_code=404, detail=f"El id del grupo de habilidad no fue encontrado")
 
         # Eliminación de la skill en la colección skills
-        result = await db["skills"].delete_one({"_id": ObjectId(item_id)})
+        result = await skills.delete_one({"_id": ObjectId(item_id)})
         if result.deleted_count == 1:
             return {"message": f"El elemento se ha eliminado"}
         else:

@@ -5,12 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90269a17-8aa0-4c61-beb0-2d473ad29ae6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ProfileApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProfileApi.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/job/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/job/proyect/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/job/proyect/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/job/proyect/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/job/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/skill_group/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/skill_group/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/skill_group/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/skill_group/skill/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/skill_group/skill/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/skill_group/skill/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skill_group/skill/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile/job/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill_group/skill/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill_group/skill/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill_group/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill_group/routes.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,25 +52,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Respaldos/Proyectos/Python/ProfileAPI&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "D:/Respaldos/Proyectos/Python/ProfileAPI/profile/job",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\profile\job" />
       <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\skillsGroup" />
+      <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\skill_group" />
+      <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\profile\skill_group" />
       <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\profile" />
+      <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\skillsGroup" />
       <recent name="D:\Respaldos\Proyectos\Python\ProfileApi\profile\routes" />
-      <recent name="D:\Respaldos\Proyectos\Python\ProfileApi\profile\models" />
-      <recent name="D:\Respaldos\Proyectos\Python\ProfileApi" />
     </key>
   </component>
   <component name="RunManager">
