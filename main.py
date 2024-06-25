@@ -6,7 +6,8 @@ from fastapi.responses import JSONResponse
 from profile.routes import router as profile_routes
 from skill_group.routes import router as skill_group_routes
 from skill_group.skill.routes import router as skill_routes
-# from profile.profile_skill import router as profile_skill_routes
+from profile.skill_group.routes import router as profile_skill_group_routes
+from profile.skill_group.skill.routes import router as profile_skill_group_skill_routes
 from openai import OpenAI
 
 load_dotenv()
@@ -30,7 +31,8 @@ app.add_middleware(
 )
 
 app.include_router(profile_routes)
-# app.include_router(profile_skill_routes)
+app.include_router(profile_skill_group_routes)
+app.include_router(profile_skill_group_skill_routes)
 app.include_router(skill_group_routes)
 app.include_router(skill_routes)
 

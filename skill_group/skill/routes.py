@@ -38,12 +38,12 @@ async def get_by_id(item_id: str):
 @router.post("/")
 async def new(item: Skill_in):
     try:
-        item_found = await db["skills"].find_one({"name": item.name, "skill_group": item.skill_group})
+        item_found = await db["skills"].find_one({"name": item.name, "skill_group_id": item.skill_group_id})
         if item_found:
             raise HTTPException(status_code=400, detail=f"\"{item.name}\" ya existe")
         else:
             # Obtención del documento skill_group padre de la coleccion skill_groups
-            skill_group = await skill_groups.find_one({"_id": ObjectId(item.skill_group)})
+            skill_group = await skill_groups.find_one({"_id": ObjectId(item.skill_group_id)})
 
             # Ciclo de cada id de la lista de skills de skill_groups padre
             for id in skill_group["skills"]:

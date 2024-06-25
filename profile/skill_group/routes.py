@@ -9,6 +9,7 @@ router = APIRouter(
     tags=["profile_skill_group"]
 )
 
+profile_skill_groups = db["profile_skill_groups"]
 
 # @router.get("/{profile_id}")
 # async def get(profile_id: str):
@@ -29,14 +30,14 @@ router = APIRouter(
 @router.post("/")
 async def new_profile_skill_group(item: Profile_skill_group_in):
     try:
-        item_found = await profile_skills.find_one({"skill_id": item.skill_id, "profile_id": item.profile_id})
+        item_found = await profile_skill_groups.find_one({"profile_id": item.profile_id, "skill_group_id": item.skill_group_id})
         if item_found:
-            raise HTTPException(status_code=400, detail=f"Esta habilidad ya existe")
+            raise HTTPException(status_code=400, detail=f"Este grupo de habilidades del perfil ya existe")
 
         item_dump = item.model_dump()
-        response = await profile_skills.insert_one(item_dump)
+        response = await profile_skill_groups.insert_one(item_dump)
         item_dump["id"] = str(response.inserted_id)
-        return Profile_skill_out(**item_dump)
+        return Profile_skill_group_out(**item_dump)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
