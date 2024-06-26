@@ -3,6 +3,7 @@ from bson import Binary, ObjectId
 from database import db
 from profile.models import ProfileOut, ProfileIn
 from profile.exeptions import ProfileNotFoundException
+from profile.skill_group.routes import get_profile_skill_groups
 
 router = APIRouter(
     prefix="/profile",
@@ -21,6 +22,9 @@ async def get():
 async def get_by_id(profile_id: str):
     profile = await db["profiles"].find_one({"_id": ObjectId(profile_id)})
     if profile:
+
+        profile["profile_skill_groups"] = await get_profile_skill_groups(profile["_id"])
+
         return ProfileOut(**profile, id=str(profile["_id"]))
     else:
         raise ProfileNotFoundException()
@@ -30,6 +34,9 @@ async def get_by_id(profile_id: str):
 async def get_profile_by_user_name(user_name: str = Path(..., min_length=1)):
     profile = await db["profiles"].find_one({"user_name": user_name})
     if profile:
+
+        profile["profile_skill_groups"] = await get_profile_skill_groups(profile["_id"])
+
         return ProfileOut(**profile, id=str(profile["_id"]))
     else:
         raise ProfileNotFoundException()

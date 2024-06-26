@@ -38,31 +38,13 @@ async def get_by_id(item_id: str):
 @router.post("/")
 async def new(item: Skill_in):
     try:
-        item_found = await db["skills"].find_one({"name": item.name, "skill_group_id": item.skill_group_id})
+        item_found = await skills.find_one({"name": item.name, "skill_group_id": item.skill_group_id})
         if item_found:
-            raise HTTPException(status_code=400, detail=f"\"{item.name}\" ya existe")
+            raise HTTPException(status_code=400, detail=f"{item.name} ya existe")
         else:
-            # Obtención del documento skill_group padre de la coleccion skill_groups
-            skill_group = await skill_groups.find_one({"_id": ObjectId(item.skill_group_id)})
-
-            # Ciclo de cada id de la lista de skills de skill_groups padre
-            for id in skill_group["skills"]:
-
-                # Obtención completa de cada skill dependiendo el id de la lista de skills de skill_groups padre
-                skill = await skills.find_one({"_id": ObjectId(id)})
-
-                # Validación de si el nuevo skill exite ya en la lista de skills
-                if skill["name"] == item.name:
-                    raise HTTPException(status_code=400, detail=f"\"{item.name}\" ya existe registrado en el grupo {skill_group["name"]}")
-
             item_dump = item.model_dump()
             response = await skills.insert_one(item_dump)
             item_dump["id"] = str(response.inserted_id)
-
-            # inserción del id del nuevo skill en la lista de skills del skill_group padre
-            skill_group["skills"].append(str(response.inserted_id))
-            # Actualización de la lista vieja por la actual
-            await skill_groups.update_one({"_id": skill_group["_id"]}, {"$set": {"skills": skill_group["skills"]}})
 
             return Skill_out(**item_dump)
     except Exception as e:

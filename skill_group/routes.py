@@ -17,7 +17,7 @@ async def get():
 
 
 @router.get("/{item_id}")
-async def get_by_id(item_id: str):
+async def get_skill_group(item_id: str):
     try:
         item = await db["skill_groups"].find_one({"_id": ObjectId(item_id)})
         if item:
@@ -56,7 +56,7 @@ async def update(item_id: str, item: Skills_group_in):
         result = await db["skill_groups"].update_one({"_id": ObjectId(item_id)}, {"$set": item_dump})
 
         if result.modified_count == 1 or result.raw_result.get('updatedExisting'):
-            return await get_by_id(item_id)
+            return await get_skill_group(item_id)
         else:
             raise HTTPException(status_code=404, detail="El elemento no se ha encontrado")
     except Exception as e:

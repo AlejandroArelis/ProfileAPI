@@ -1,4 +1,7 @@
 from pydantic import BaseModel, conint
+from typing import List
+from profile.skill_group.skill.models import Profile_skill_group_skill_out
+from skill_group.models import Skills_group_out
 
 
 class Profile_skill_group_in(BaseModel):
@@ -6,5 +9,7 @@ class Profile_skill_group_in(BaseModel):
     skill_group_id: str
 
 
-class Profile_skill_group_out(Profile_skill_group_in):
+class Profile_skill_group_out(BaseModel):
     id: str
+    skills: List[Profile_skill_group_skill_out] = []
+    skill_group: Skills_group_out = None

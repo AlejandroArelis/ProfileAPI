@@ -1,6 +1,7 @@
 from uuid import UUID
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List
+from profile.skill_group.models import Profile_skill_group_out
 
 
 class ProfileIn(BaseModel):
@@ -18,3 +19,4 @@ class ProfileIn(BaseModel):
 
 class ProfileOut(ProfileIn):
     id: str
+    profile_skill_groups: List[Profile_skill_group_out] = []
