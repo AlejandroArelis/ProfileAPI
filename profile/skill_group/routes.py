@@ -17,7 +17,6 @@ profile_skill_group_skills = db["profile_skill_group_skills"]
 skills = db["skills"]
 
 
-@router.get("/{profile_id}")
 async def get_profile_skill_groups(profile_id: str):
 
     try:
@@ -27,7 +26,7 @@ async def get_profile_skill_groups(profile_id: str):
             profile_skill_groups_list = await profile_skill_groups.find({"profile_id": str(profile["_id"])}).to_list(None)
 
             for profile_skill_group in profile_skill_groups_list:
-                profile_skill_group["skills"] = await get_profile_skill_group_skill(str(profile_skill_group["_id"]))
+                profile_skill_group["skills"] = await get_profile_skill_group_skills(str(profile_skill_group["_id"]))
 
                 skill_group = await get_skill_group(str(profile_skill_group["skill_group_id"]))
 
@@ -39,9 +38,28 @@ async def get_profile_skill_groups(profile_id: str):
 
     except Exception as e:
         raise e
+    
+async def get_profile_skill_group(id: str):
+
+    try:
+        profile_skill_group = await profile_skill_groups.find_one({"_id": ObjectId(id)})
+
+        if profile_skill_group:
+            profile_skill_group["skills"] = await get_profile_skill_group_skills(str(profile_skill_group["_id"]))
+
+            skill_group = await get_skill_group(str(profile_skill_group["skill_group_id"]))
+
+            profile_skill_group["name"] = skill_group.name
+
+            return profile_skill_group
+        else:
+            raise HTTPException(status_code=500, detail="El perfil no se ha encontrado")
+
+    except Exception as e:
+        raise e
 
 
-async def get_profile_skill_group_skill(profile_skill_group_id: str):
+async def get_profile_skill_group_skills(profile_skill_group_id: str):
     try:
         profile_skill_group = await profile_skill_groups.find_one({"_id": ObjectId(profile_skill_group_id)})
 
@@ -53,7 +71,13 @@ async def get_profile_skill_group_skill(profile_skill_group_id: str):
                 skill = await skills.find_one({"_id": ObjectId(str(profile_skill_group_skill["skill_id"]))})
                 
                 profile_skill_group_skill["name"] = skill["name"]
+                profile_skill_group_skill["color"] = skill["color"]
+                profile_skill_group_skill["image"] = skill["image"]
                 profile_skill_group_skill["id"] = str(profile_skill_group_skill["_id"])
+                del profile_skill_group_skill["_id"]
+                del profile_skill_group_skill["profile_skill_group_id"]
+                del profile_skill_group_skill["skill_id"]
+                del profile_skill_group_skill["profile_id"]
 
             return profile_skill_group_skills_list
         else:
@@ -73,7 +97,8 @@ async def new_profile_skill_group(item: Profile_skill_group_in):
         item_dump = item.model_dump()
         response = await profile_skill_groups.insert_one(item_dump)
         item_dump["id"] = str(response.inserted_id)
-        return Profile_skill_group_out(**item_dump)
+        del item_dump["_id"]
+        return item_dump
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

@@ -2,7 +2,7 @@ from bson import ObjectId
 from fastapi import APIRouter, HTTPException
 from database import db
 from profile.skill_group.skill.models import Profile_skill_group_skill_in, Profile_skill_group_skill_out
-from profile.skill_group.routes import new_profile_skill_group
+from profile.skill_group.routes import new_profile_skill_group, get_profile_skill_group
 from profile.skill_group.models import Profile_skill_group_in
 
 
@@ -51,52 +51,26 @@ async def new_profile_skill_group_skill(item: Profile_skill_group_skill_in):
 
             # Inserta el nuevo Profile_skill_group en el Profile
             profile_skill_group = await new_profile_skill_group(profile_skill_group)
-
-            profile_skill_group_skill = Profile_skill_group_skill_out(**item.model_dump(), profile_skill_group_id=profile_skill_group.id)
         else:
-            profile_skill_group_skill = Profile_skill_group_skill_out(**item.model_dump(), profile_skill_group_id=str(profile_skill_group["_id"]))
+            profile_skill_group["id"] = str(profile_skill_group["_id"])
+            del profile_skill_group["_id"]
 
         # Si el profile_skill_group existe en el profile, entonces se valida que la skill no esté repetido
-        response = await profile_skill_group_skills.find_one({"profile_skill_group_id": profile_skill_group_skill.profile_skill_group_id, "skill_id": profile_skill_group_skill.skill_id})
+        response = await profile_skill_group_skills.find_one({"profile_skill_group_id": profile_skill_group["id"], "skill_id": item.skill_id})
 
         if response:
             raise HTTPException(status_code=400, detail=f"Esta habilidad ya existe en el grupo de habilidades del perfil")
 
-        # Se agrega la nueva Profile_skill_group_skill al Profile_skill_group
-        profile_skill_group_skill = profile_skill_group_skill.model_dump()
+        profile_skill_group_skill = item.model_dump()
+        profile_skill_group_skill["profile_skill_group_id"] = profile_skill_group["id"]
+        await profile_skill_group_skills.insert_one(profile_skill_group_skill)
+        
+        profile_skill_group = await get_profile_skill_group(str(profile_skill_group["id"]))
+        
+        profile_skill_group["id"] = str(profile_skill_group["_id"])
+        del profile_skill_group["_id"]
+        del profile_skill_group["profile_id"]
 
-        del profile_skill_group_skill["id"]
-        response = await profile_skill_group_skills.insert_one(profile_skill_group_skill)
-
-        profile_skill_group_skill["id"] = str(response.inserted_id)
-        return Profile_skill_group_skill_out(**profile_skill_group_skill)
+        return profile_skill_group
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-
-# @router.put("/{item_id}")
-# async def update(item_id: str, item: Profile_skill_in):
-#     try:
-#         item_found = await profile_skills.find_one({"skill_id": item.skill_id, "profile_id": item.profile_id})
-#         if item_found:
-#             raise HTTPException(status_code=400, detail=f"Esta habilidad ya existe")
-#
-#         item_dump = item.model_dump()
-#         result = await profile_skills.update_one({"_id": ObjectId(item_id)}, {"$set": item_dump})
-#
-#         print(result)
-#         if result.modified_count == 1 or result.raw_result.get('updatedExisting'):
-#             return True
-#         else:
-#             raise HTTPException(status_code=404, detail="La habilidad no se ha modificado")
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=str(e))
-
-
-# @router.delete("/{item_id}")
-# async def delete(item_id: str):
-#     result = await profile_skills.delete_one({"_id": ObjectId(item_id)})
-#     if result.deleted_count == 1:
-#         return {"message": f"La habilidad se ha eliminado"}
-#     else:
-#         raise HTTPException(status_code=404, detail="La habilidad no fue encontrada")
+        raise e
