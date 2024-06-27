@@ -14,6 +14,7 @@ router = APIRouter(
 profiles = db["profiles"]
 profile_skill_groups = db["profile_skill_groups"]
 profile_skill_group_skills = db["profile_skill_group_skills"]
+skills = db["skills"]
 
 
 @router.get("/{profile_id}")
@@ -27,7 +28,10 @@ async def get_profile_skill_groups(profile_id: str):
 
             for profile_skill_group in profile_skill_groups_list:
                 profile_skill_group["skills"] = await get_profile_skill_group_skill(str(profile_skill_group["_id"]))
-                profile_skill_group["skill_group"] = await get_skill_group(str(profile_skill_group["skill_group_id"]))
+
+                skill_group = await get_skill_group(str(profile_skill_group["skill_group_id"]))
+
+                profile_skill_group["name"] = skill_group.name
 
             return [Profile_skill_group_out(**profile_skill_group, id=str(profile_skill_group["_id"])) for profile_skill_group in profile_skill_groups_list]
         else:
@@ -43,8 +47,15 @@ async def get_profile_skill_group_skill(profile_skill_group_id: str):
 
         if profile_skill_group:
             profile_skill_group_skills_list = await profile_skill_group_skills.find({"profile_skill_group_id": str(profile_skill_group["_id"])}).to_list(None)
+            
+            for profile_skill_group_skill in profile_skill_group_skills_list:
+                
+                skill = await skills.find_one({"_id": ObjectId(str(profile_skill_group_skill["skill_id"]))})
+                
+                profile_skill_group_skill["name"] = skill["name"]
+                profile_skill_group_skill["id"] = str(profile_skill_group_skill["_id"])
 
-            return [Profile_skill_group_skill_out(**profile_skill_group_skill, id=str(profile_skill_group_skill["_id"])) for profile_skill_group_skill in profile_skill_group_skills_list]
+            return profile_skill_group_skills_list
         else:
             raise HTTPException(status_code=500, detail="El grupo de habilidades del perfil no se ha encontrado")
 

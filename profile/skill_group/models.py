@@ -12,4 +12,4 @@ class Profile_skill_group_in(BaseModel):
 class Profile_skill_group_out(BaseModel):
     id: str
     skills: List[Profile_skill_group_skill_out] = []
-    skill_group: Skills_group_out = None
+    name: str = None

@@ -19,4 +19,4 @@ class ProfileIn(BaseModel):
 
 class ProfileOut(ProfileIn):
     id: str
-    profile_skill_groups: List[Profile_skill_group_out] = []
+    skill_groups: List[Profile_skill_group_out] = []

@@ -35,7 +35,7 @@ async def get_profile_by_user_name(user_name: str = Path(..., min_length=1)):
     profile = await db["profiles"].find_one({"user_name": user_name})
     if profile:
 
-        profile["profile_skill_groups"] = await get_profile_skill_groups(profile["_id"])
+        profile["skill_groups"] = await get_profile_skill_groups(profile["_id"])
 
         return ProfileOut(**profile, id=str(profile["_id"]))
     else:
