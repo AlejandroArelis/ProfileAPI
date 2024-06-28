@@ -74,3 +74,31 @@ async def new_profile_skill_group_skill(item: Profile_skill_group_skill_in):
         return profile_skill_group
     except Exception as e:
         raise e
+
+@router.delete("/{profile_skill_group_skill_id}")
+async def delete_profile_skill_group_skill(profile_skill_group_skill_id: str):
+    try:
+        profile_skill_group_skill = await profile_skill_group_skills.find_one_and_delete({'_id': ObjectId(profile_skill_group_skill_id)})
+        
+        if profile_skill_group_skill:
+            
+            skill = await skills.find_one({"_id": ObjectId(profile_skill_group_skill["skill_id"])})
+            skill["id"] = str(skill["_id"])
+            del skill["_id"]
+         
+            profile_skill_group_skills_list = await profile_skill_group_skills.find({"profile_skill_group_id": profile_skill_group_skill["profile_skill_group_id"]}).to_list(None)
+
+            if len(profile_skill_group_skills_list) == 0:
+                profile_skill_group = await profile_skill_groups.find_one_and_delete({'_id': ObjectId(profile_skill_group_skill["profile_skill_group_id"])})
+                
+                if profile_skill_group:
+                    return skill
+                else:
+                    raise HTTPException(status_code=404, detail=f"La habilidad se eliminó, pero no se eliminó el grupo")
+        
+            return skill
+        else:
+            raise HTTPException(status_code=404, detail=f"La habilidad no se eliminó")
+            
+    except Exception as e:
+        raise e
