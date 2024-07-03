@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\.venv",
+    "\\profile",
+    "\\profile\\job",
+    "\\profile\\skill_group",
+    "\\profile\\skill_group\\skill",
+    "\\skill_group",
+    "\\skill_group\\skill"
+  ],
+  "SelectedNode": "\\profile\\job\\routes.py",
+  "PreviewInSolutionExplorer": false
+}

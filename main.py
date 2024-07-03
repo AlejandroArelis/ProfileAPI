@@ -3,6 +3,7 @@ from dotenv import load_dotenv
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from profile.job.routes import router as profile_job
 from profile.routes import router as profile_routes
 from skill_group.routes import router as skill_group_routes
 from skill_group.skill.routes import router as skill_routes
@@ -35,6 +36,7 @@ app.include_router(profile_skill_group_routes)
 app.include_router(profile_skill_group_skill_routes)
 app.include_router(skill_group_routes)
 app.include_router(skill_routes)
+app.include_router(profile_job)
 
 
 @app.get("/")

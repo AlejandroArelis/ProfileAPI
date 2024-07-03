@@ -102,3 +102,20 @@ async def delete_profile_skill_group_skill(profile_skill_group_skill_id: str):
             
     except Exception as e:
         raise e
+
+
+@router.put("/{profile_skill_group_skill_id}")
+async def delete_profile_skill_group_skill(profile_skill_group_skill_id: str, percentage: int):
+    try:
+        if percentage < 1 or percentage > 100:
+            raise HTTPException(status_code=400, detail="El porcentaje debe estar entre 1 y 100")
+        
+        profile_skill_group_skill = await profile_skill_group_skills.find_one_and_update({'_id': ObjectId(profile_skill_group_skill_id)}, {"$set": {"percentage": percentage}})
+
+        if profile_skill_group_skill:
+            return True
+        else:
+            raise HTTPException(status_code=404, detail=f"La habilidad no se modificó")
+            
+    except Exception as e:
+        raise e
