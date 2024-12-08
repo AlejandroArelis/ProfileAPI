@@ -3,52 +3,16 @@
   "WorkspaceRootPath": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\job\\routes.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:profile\\job\\routes.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\Player\\services\\files.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Player\\services\\files.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\job\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:profile\\job\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\Player\\api\\v1\\routes\\files.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Player\\api\\v1\\routes\\files.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\skill_group\\skill\\routes.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:profile\\skill_group\\skill\\routes.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\skill_group\\routes.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:profile\\skill_group\\routes.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\main.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:main.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\job\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:profile\\job\\__init__.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\skill_group\\skill\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:profile\\skill_group\\skill\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\skill_group\\skill\\routes.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:skill_group\\skill\\routes.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\routes.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:profile\\routes.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\skill_group\\skill\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:skill_group\\skill\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\skill_group\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:profile\\skill_group\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:profile\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|d:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\Player\\repositories\\files.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Player\\repositories\\files.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,160 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "__init__.py",
-              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\job\\__init__.py",
-              "RelativeDocumentMoniker": "profile\\job\\__init__.py",
-              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\job\\__init__.py",
-              "RelativeToolTip": "profile\\job\\__init__.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-07-03T21:04:01.277Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "routes.py",
-              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\job\\routes.py",
-              "RelativeDocumentMoniker": "profile\\job\\routes.py",
-              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\job\\routes.py",
-              "RelativeToolTip": "profile\\job\\routes.py",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAYwFYAAABMAAAA",
+              "Title": "files.py",
+              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\Player\\services\\files.py",
+              "RelativeDocumentMoniker": "Player\\services\\files.py",
+              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\Player\\services\\files.py",
+              "RelativeToolTip": "Player\\services\\files.py",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAAEkAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-07-03T21:03:03.798Z",
+              "WhenOpened": "2024-09-26T21:19:14.015Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "models.py",
-              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\job\\models.py",
-              "RelativeDocumentMoniker": "profile\\job\\models.py",
-              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\job\\models.py",
-              "RelativeToolTip": "profile\\job\\models.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Title": "files.py",
+              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\Player\\api\\v1\\routes\\files.py",
+              "RelativeDocumentMoniker": "Player\\api\\v1\\routes\\files.py",
+              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\Player\\api\\v1\\routes\\files.py",
+              "RelativeToolTip": "Player\\api\\v1\\routes\\files.py",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-07-03T21:01:31.974Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "routes.py",
-              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\skill_group\\skill\\routes.py",
-              "RelativeDocumentMoniker": "skill_group\\skill\\routes.py",
-              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\skill_group\\skill\\routes.py",
-              "RelativeToolTip": "skill_group\\skill\\routes.py",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAGUAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-06-27T02:45:35.925Z",
+              "WhenOpened": "2024-09-26T23:04:39.542Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "routes.py",
-              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\skill_group\\skill\\routes.py",
-              "RelativeDocumentMoniker": "profile\\skill_group\\skill\\routes.py",
-              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\skill_group\\skill\\routes.py",
-              "RelativeToolTip": "profile\\skill_group\\skill\\routes.py",
-              "ViewState": "AQIAAF0AAAAAAAAAAAAAAGkAAAAAAAAA",
+              "Title": "files.py",
+              "DocumentMoniker": "d:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\Player\\repositories\\files.py",
+              "RelativeDocumentMoniker": "Player\\repositories\\files.py",
+              "ToolTip": "d:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\Player\\repositories\\files.py",
+              "RelativeToolTip": "Player\\repositories\\files.py",
+              "ViewState": "AQIAADYAAAAAAAAAAAAlwEIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-06-27T00:37:14.103Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "models.py",
-              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\skill_group\\skill\\models.py",
-              "RelativeDocumentMoniker": "profile\\skill_group\\skill\\models.py",
-              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\skill_group\\skill\\models.py",
-              "RelativeToolTip": "profile\\skill_group\\skill\\models.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-06-27T00:35:54.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "models.py",
-              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\skill_group\\models.py",
-              "RelativeDocumentMoniker": "profile\\skill_group\\models.py",
-              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\skill_group\\models.py",
-              "RelativeToolTip": "profile\\skill_group\\models.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-06-27T00:27:41.533Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "routes.py",
-              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\skill_group\\routes.py",
-              "RelativeDocumentMoniker": "profile\\skill_group\\routes.py",
-              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\skill_group\\routes.py",
-              "RelativeToolTip": "profile\\skill_group\\routes.py",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAlwBIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-06-26T23:34:50.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "main.py",
-              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\main.py",
-              "RelativeDocumentMoniker": "main.py",
-              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\main.py",
-              "RelativeToolTip": "main.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-06-26T23:18:27.916Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "models.py",
-              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\skill_group\\skill\\models.py",
-              "RelativeDocumentMoniker": "skill_group\\skill\\models.py",
-              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\skill_group\\skill\\models.py",
-              "RelativeToolTip": "skill_group\\skill\\models.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-06-27T16:44:25.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "models.py",
-              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\models.py",
-              "RelativeDocumentMoniker": "profile\\models.py",
-              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\models.py",
-              "RelativeToolTip": "profile\\models.py",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-06-26T23:26:20.64Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "routes.py",
-              "DocumentMoniker": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\routes.py",
-              "RelativeDocumentMoniker": "profile\\routes.py",
-              "ToolTip": "D:\\Respaldos\\Proyectos\\Python\\ProfileAPI\\profile\\routes.py",
-              "RelativeToolTip": "profile\\routes.py",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAABoAAABIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-06-26T23:26:19.83Z",
+              "WhenOpened": "2024-09-26T23:03:05.698Z",
               "EditorCaption": ""
             }
           ]

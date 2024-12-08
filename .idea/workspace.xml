@@ -5,16 +5,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90269a17-8aa0-4c61-beb0-2d473ad29ae6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.vs/ProfileAPI/FileContentIndex/6d2b82de-f778-4937-a51b-df79e99ce2d9.vsidx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/ProfileAPI/FileContentIndex/a3968fe8-4337-40a2-9726-beeadb2ed6b1.vsidx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/ProfileAPI/FileContentIndex/cd243764-93ef-4772-92af-20b91f7c6353.vsidx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/ProfileAPI/FileContentIndex/ecc24ce0-d1d1-4c3a-9c87-bfbc6633835f.vsidx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/ProfileAPI/FileContentIndex/f9ae04d4-6d26-4570-9a82-66b1f8e602dd.vsidx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vs/slnx.sqlite-journal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/api/v1/routes/directories.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/api/v1/routes/files.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/db/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/db/mongo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/models/file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/repositories/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/repositories/directories.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/repositories/file_error.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/repositories/files.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/repositories/people.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/repositories/tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/schemas/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/schemas/file.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/services/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/services/directories.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/services/files.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/services/people.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/services/tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Player/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/db/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/db/mongo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/job/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/job/project/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/job/project/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/job/project/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/job/project/skill/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/job/project/skill/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/job/project/skill/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/skill_group/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/skill_group/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/skill_group/routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/skill_group/skill/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/skill_group/skill/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile/profile/skill_group/skill/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ProfileApi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ProfileApi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProfileAPI/FileContentIndex/038813c8-c4c9-4dbd-8bc5-fab701460995.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProfileAPI/FileContentIndex/0b8643a1-c693-49ca-abe0-abd0869f3204.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProfileAPI/FileContentIndex/1788b5bd-92cc-4099-88ed-24e4c0e54cd4.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProfileAPI/FileContentIndex/7ffff06e-74bc-459d-9172-04522025aa4a.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProfileAPI/FileContentIndex/d0f7945e-99d6-43a4-be14-21f12c34b2dd.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProfileAPI/v17/.wsuo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProfileAPI/v17/.wsuo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/ProfileAPI/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/ProfileAPI/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/PythonSettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/VSWorkspaceState.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/slnx.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/slnx.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile/exeptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile/profile/exeptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile/job/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Player/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile/job/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile/profile/job/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile/job/proyect/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile/job/proyect/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile/job/proyect/routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile/job/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile/profile/job/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile/profile/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile/routes.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/profile/skill_group/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile/skill_group/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile/skill_group/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile/skill_group/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile/skill_group/skill/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile/skill_group/skill/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile/skill_group/skill/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile/skill_group/skill/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill_group/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill_group/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill_group/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill_group/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skill_group/skill/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/skill_group/skill/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill_group/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Player/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill_group/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill_group/routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill_group/skill/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Player/api/v1/routes/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill_group/skill/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skill_group/skill/routes.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,34 +115,64 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Respaldos/Proyectos/Python/ProfileAPI/profile/job&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Respaldos/Proyectos/Python/ProfileAPI/Profile&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\Profile" />
+      <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\Player" />
       <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\profile\job" />
       <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\Profile2" />
       <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\skill_group" />
       <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\profile\skill_group" />
       <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\profile" />
       <recent name="D:\Respaldos\Proyectos\Python\ProfileAPI\skillsGroup" />
-      <recent name="D:\Respaldos\Proyectos\Python\ProfileApi\profile\routes" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="run" type="CompoundRunConfigurationType">
       <method v="2" />
     </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ProfileApi" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-48aec45f0201-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17011.127" />
+        <option value="bundled-python-sdk-884f5ed5d46b-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.22855.92" />
       </set>
     </attachedChunks>
   </component>

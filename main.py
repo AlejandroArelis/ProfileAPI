@@ -1,14 +1,19 @@
 import logging
-from dotenv import load_dotenv
+import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from profile.job.routes import router as profile_job
-from profile.routes import router as profile_routes
-from skill_group.routes import router as skill_group_routes
-from skill_group.skill.routes import router as skill_routes
-from profile.skill_group.routes import router as profile_skill_group_routes
-from profile.skill_group.skill.routes import router as profile_skill_group_skill_routes
+from Profile.profile.routes import router as profile_routes
+from Profile.profile.job.routes import router as profile_job_routes
+from Profile.profile.job.project.routes import router as profile_job_project_routes
+from Profile.skill_group.routes import router as skill_group_routes
+from Profile.skill_group.skill.routes import router as skill_routes
+from Profile.profile.skill_group.routes import router as profile_skill_group_routes
+from Profile.profile.skill_group.skill.routes import router as profile_skill_group_skill_routes
+from Profile.profile.job.project.skill.routes import router as project_skill_routes
+from Player.api.v1.routes import files
+from Player.api.v1.routes import directories
+from dotenv import load_dotenv
 from openai import OpenAI
 
 load_dotenv()
@@ -36,7 +41,11 @@ app.include_router(profile_skill_group_routes)
 app.include_router(profile_skill_group_skill_routes)
 app.include_router(skill_group_routes)
 app.include_router(skill_routes)
-app.include_router(profile_job)
+app.include_router(profile_job_routes)
+app.include_router(profile_job_project_routes)
+app.include_router(project_skill_routes)
+app.include_router(files.router)
+app.include_router(directories.router)
 
 
 @app.get("/")
@@ -60,3 +69,7 @@ async def exception_handler(request: Request, exc: Exception):
         status_code=500,
         content={"message": "Internal server error"}
     )
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
